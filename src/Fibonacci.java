@@ -18,10 +18,14 @@ public class Fibonacci {
         return wynik;
     }
 
-    public static void main(String[] args) {
+    public static void ObliczanieCiaguFibonacci(){
         System.out.println("Ciag Fibonacci, podaj liczbe");
         Scanner scanner = new Scanner(System.in);
         int Fib = scanner.nextInt();
         System.out.println(Fibonacci(Fib));
+    }
+
+    public static void main(String[] args) {
+        ObliczanieCiaguFibonacci();
     }
 }
