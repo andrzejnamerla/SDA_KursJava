@@ -5,6 +5,8 @@ package ProgObiektowe.PodstawyOOP;
  */
 public class Pracownik {
 
+    //Stara kalasa pracownik, zawiera pola publiczne
+
     /*zasada tworzenia klasy, metody:
     najpierw definiujemy obiekty (pola),
     pozniej konstruktory,
@@ -18,6 +20,7 @@ public class Pracownik {
 
     //nie mozna sie odwolac do pola pensja poza ta klasa, poniewaz jest ustawiony private
     private float pensja;
+
 
 
     /*konstruktor to metoda, ktora nazywa sie tak samo jak klasa i jest tworzona przez kompilator przy tworzeniu programu,
@@ -37,5 +40,11 @@ public class Pracownik {
 
     public void OpiszPracownika(){
         System.out.println("Imie: " + this.imie + "\nNazwisko: " + this.nazwisko); //slowo this odwoluje sie do obeiktu, ktory to wywolal
+        System.out.println(pensja);
+    }
+
+    public void podwyzka(int procent){
+        float kwota = (pensja * procent)/100;
+        pensja+=kwota;
     }
 }

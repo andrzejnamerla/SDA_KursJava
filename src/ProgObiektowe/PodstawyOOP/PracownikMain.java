@@ -1,11 +1,15 @@
 package ProgObiektowe.PodstawyOOP;
 
+import java.util.Random;
+
 /**
  * Created by RENT on 2017-07-13.
  */
 public class PracownikMain {
     public static void main(String[] args) {
         //String imie = "Piotr";
+
+        //main do klasy pracownik zawierajacej publiczne pola
 
         Pracownik prezes = new Pracownik();
         Pracownik dyrekor = new Pracownik();
@@ -20,6 +24,8 @@ public class PracownikMain {
         //dyrekor.pensja = 500; nie moge sie odniesc do tego parametru, poniewaz w klasie Pracownik pensja ma ustawione private
         dyrekor.wiek = 40;
 
+        prezes.podwyzka(10);
+
         System.out.println("\nOpis pracownika (z klasy): ");
         prezes.Opis();
 
@@ -30,5 +36,7 @@ public class PracownikMain {
 
         System.out.println("\nDane prezesa (odwolanie do metody w klasie): ");
         prezes.OpiszPracownika();
+
+
     }
 }
