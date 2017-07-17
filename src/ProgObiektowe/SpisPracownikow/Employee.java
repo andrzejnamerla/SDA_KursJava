@@ -1,8 +1,5 @@
 package ProgObiektowe.SpisPracownikow;
 
-/**
- * Created by RENT on 2017-07-14.
- */
 public class Employee {
 
     private String name;
@@ -38,13 +35,16 @@ public class Employee {
     public double getSalary(){
         return salary;
     }
-
     public void setSalary(double sal){
         if (sal<0){
             System.out.println("Penskja nie moze byc ujemna");
         } else {
             this.salary = sal;
         }
+    }
+
+    public void describleEmployee(){
+        System.out.println("Name: " + this.name + " Surname: " + this.surname + " Age: " + this.age);
     }
 
 
