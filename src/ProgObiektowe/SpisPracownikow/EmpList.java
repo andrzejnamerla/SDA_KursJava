@@ -16,7 +16,7 @@ public class EmpList {
         boolean exit = false;
 
         while (exit == false) {
-            System.out.println("\nWybierz opcje: \n1. Dodaj nowego pracownika \n2. Usuń pracownika \n3. Wypisz wszystkich praconików \n0. Wyjdz z programu");
+            System.out.println("\nWybierz opcje: \n1. Dodaj nowego pracownika \n2. Usuń pracownika \n3. Wypisz wszystkich praconików \n4. Wypisz srednia wielkosc zarobkow \n5. Wypisz sredni wiek pracownikow \n6. Najwieksza pensja \n0. Wyjdz z programu");
             int option = scanner.nextInt();
 
             switch (option) {
@@ -30,6 +30,18 @@ public class EmpList {
                 }
                 case 3: {
                     printAllEmployees();
+                    break;
+                }
+                case 4: {
+                    printAverageSalary();
+                    break;
+                }
+                case 5: {
+                    printAverageAge();
+                    break;
+                }
+                case 6: {
+                    printHigestSalary();
                     break;
                 }
                 case 0: {
@@ -66,13 +78,28 @@ public class EmpList {
 
     public void deleteEmployeeFromMyCompany() {
         //logika usuwania pracownika
-
+        System.out.println("Pracownikow nie zwalniamy!");
     }
 
-    public void printAllEmployees() {
+    //Metoda uzywa metode foreach i powoduje NullPointerExeption, gdy liczba pracownikow jest mniejsza niz maksymalna
+    public void printAllEmployeesBad() {
         //logika wyswietlania pracownika
+        myCompany.printEmployeesBad();
+    }
+    public void printAllEmployees(){
         myCompany.printEmployees();
     }
 
+    public void printAverageSalary(){
+        System.out.println(myCompany.countAverageSalary());
+    }
+
+    public void printAverageAge(){
+        System.out.println(myCompany.countAverageAge());
+    }
+
+    public void printHigestSalary(){
+        myCompany.getEmployeeWithHigestSalary();
+    }
 
 }

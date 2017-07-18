@@ -44,7 +44,7 @@ public class Employee {
     }
 
     public void describleEmployee(){
-        System.out.println("Name: " + this.name + " Surname: " + this.surname + " Age: " + this.age);
+        System.out.println("Imie: " + this.name + " Nazwisko: " + this.surname + " Wiek: " + this.age);
     }
 
 
