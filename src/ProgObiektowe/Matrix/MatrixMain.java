@@ -9,3 +9,5 @@ public class MatrixMain {
         matrix.start();
     }
 }
+
+//trzeba dokonczyc poprawne dodawanie macierzy po roznych rozmiarach oraz dodac odpowiednio do odejmowania

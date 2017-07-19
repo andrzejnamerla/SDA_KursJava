@@ -7,14 +7,17 @@ import java.util.Scanner;
  */
 public class Matrix {
     private int[][] matrix;
-    private int m;
-    private int n;
+    private int m = 0;
+    private int n = 0;
 
-    public Matrix() {
-        m = 3;
-        n = 3;
+    public Matrix(int m, int n) {
+        if (m < 0 && n < 0) {
+            System.out.println("Nieprawidlowe wielkosci macierzy");
+        } else {
+            this.m = m;
+            this.n = n;
+        }
         matrix = new int[m][n];
-
     }
 
     public void initializMatrix() {
@@ -39,14 +42,29 @@ public class Matrix {
     }
 
 
-    public Matrix addMatrix(Matrix m) {
-        Matrix tmpMatrix = new Matrix();
+    public Matrix addMatrix(Matrix m2) {
+        Matrix tmpMatrix = new Matrix(m, n);
+        if (matrix.length != m2.matrix.length) {
+            System.out.println("Macierze nie maja tych samych wymiarow");
+        } else {
+            for (int i = 0; i < matrix.length; i++) {
+                for (int j = 0; j < matrix[i].length; j++) {
+                    tmpMatrix.matrix[i][j] = matrix[i][j] + m2.matrix[i][j];
+                    //System.out.print(" "+tmpMatrix[i][j]+" ");
+                }
+                //System.out.println();
+            }
+        }
+        return tmpMatrix;
+
+    }
+
+    public Matrix lessMatrix(Matrix m2) {
+        Matrix tmpMatrix = new Matrix(m, n);
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
-                tmpMatrix.matrix[i][j] = matrix[i][j] + m.matrix[i][j];
-                //System.out.print(" "+tmpMatrix[i][j]+" ");
+                tmpMatrix.matrix[i][j] = matrix[i][j] - m2.matrix[i][j];
             }
-            //System.out.println();
         }
         return tmpMatrix;
     }
