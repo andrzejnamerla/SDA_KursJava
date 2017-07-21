@@ -43,14 +43,17 @@ public class Main {
 
         System.out.println("Zadania na Punktach 2D i 3D");
         //zadania z klasami punkt2D i punkt3D
-        Scanner scanner = new Scanner(System.in);
         Random random = new Random();
-        Punkt2D punkt2D = new Punkt2D();
 
+        Punkt2D punkt2D = new Punkt2D();
         Punkt3D punkt3D = new Punkt3D(random.nextDouble(),random.nextDouble(),random.nextDouble());
 
-        punkt2D.opiszPunkt();
-        punkt3D.opiszPunkt();
+        System.out.println(punkt2D.opiszPunkt());
+        System.out.println(punkt3D.opiszPunkt());
+
+        System.out.println();
+        System.out.println(punkt2D.Opisz());
+        System.out.println(punkt3D.Opisz());
 
     }
 }

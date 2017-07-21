@@ -27,7 +27,14 @@ public class Punkt3D extends Punkt2D {
     }
 
     @Override
-    public void opiszPunkt() {
-        System.out.println("Moje punkty x " + this.getX() + ", y " + this.getY() + ", z " + z);
+    public String opiszPunkt() {
+        return "Moje punkty x " + this.getX() + ", y " + this.getY() + ", z " + z;
+    }
+
+    @Override
+    public String Opisz(){
+        //pobieramy pocztaek tekstu Opisz() z Punkt2D i dodajemy brakujacy, zeby nie kopiowac tego samego
+        String opis = super.Opisz();
+        return opis + " oraz z: " + z;
     }
 }

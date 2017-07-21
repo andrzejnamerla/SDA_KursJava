@@ -34,7 +34,11 @@ public class Punkt2D {
         this.y = y;
     }
 
-    public void opiszPunkt() {
-        System.out.println("Moje punkty to x " + x + ", y " + y);
+    public String opiszPunkt() {
+        return "Moje punkty to x " + x + ", y " + y;
+    }
+
+    public String Opisz(){
+        return "Wspolrzedna x: "+this.x+", y: "+this.y;
     }
 }
