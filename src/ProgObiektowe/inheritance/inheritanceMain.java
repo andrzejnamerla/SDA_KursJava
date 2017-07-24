@@ -8,7 +8,7 @@ import java.util.Scanner;
 /**
  * Created by RENT on 2017-07-20.
  */
-public class Main {
+public class inheritanceMain {
     public static void main(String[] args) {
 
         Osoba osoba = new Osoba("A", "N", 30);
