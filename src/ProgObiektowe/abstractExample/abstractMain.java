@@ -16,6 +16,10 @@ public class abstractMain {
         while (exit == false) {
             System.out.println("\nDostepne metody do obliczen pola i obwodu dla fidur \n(maksymalnie 10 figur): \n1. Kwadrat \n2. Prostokat \n3. Kolo \n4. Wyswietl obliczone wyniki \n0. Koniec");
             opcja = scanner.nextInt();
+            /* //przyklad tworzenia wskaznika;
+            Figura fig = null;
+            //pozniej w poszczeglnych przypadkach musimy dodac, np. fig = new Kwadra();
+            */
             switch (opcja) {
                 case 1: {
                     System.out.println("Podaj dlugosc boku (a) ");
