@@ -18,13 +18,10 @@ public class Stos {
     }
 
     public int pop(){
-        if (licznik>=0){
+
             this.licznik--;
             return this.wektor[this.licznik];
-        }else {
-            return -1;
 
-        }
     }
 
 
