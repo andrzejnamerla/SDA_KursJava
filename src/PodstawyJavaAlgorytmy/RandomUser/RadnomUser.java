@@ -1,4 +1,4 @@
-package ProgObiektowe.RandomUser;
+package PodstawyJavaAlgorytmy.RandomUser;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
