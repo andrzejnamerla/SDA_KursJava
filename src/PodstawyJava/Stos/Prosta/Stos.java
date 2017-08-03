@@ -1,4 +1,4 @@
-package PodstawyJava.Stos;
+package PodstawyJava.Stos.Prosta;
 
 /**
  * Created by RENT on 2017-08-03.
@@ -12,7 +12,7 @@ public class Stos {
         this.wektor = new int[rozmiar];
     }
 
-    public void pusch(int el){
+    public void push(int el){
         this.wektor[this.licznik]=el;
         this.licznik++;
     }
