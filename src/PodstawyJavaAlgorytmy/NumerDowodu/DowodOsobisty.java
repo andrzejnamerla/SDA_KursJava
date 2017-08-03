@@ -7,6 +7,8 @@ import java.util.Scanner;
  */
 public class DowodOsobisty {
 
+    //Do POPRAWY!!!
+
     public static void main(String[] args) {
         boolean poprawnyNumer = false;
         String dowod;
