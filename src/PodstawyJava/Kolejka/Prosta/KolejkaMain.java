@@ -1,4 +1,4 @@
-package PodstawyJava.Kolejka;
+package PodstawyJava.Kolejka.Prosta;
 
 public class KolejkaMain {
     public static void main(String[] args) {
