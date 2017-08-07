@@ -92,4 +92,48 @@ public class List {
         }
     }
 
+    public void bubbleSort() {
+
+        boolean isNotSorted = true;
+
+        while (isNotSorted) {
+            ListElement current = this.first;
+
+            isNotSorted = false;
+
+            if (current != null) {
+                ListElement next = current.getNext();
+
+                while (next != null) {
+                    if (current.getValue() > next.getValue()) {
+                        isNotSorted = true;
+                        next.setPrev(current.getPrev());
+                        current.setPrev(next);
+
+                        current.setNext(next.getNext());
+
+                        next.setNext(current);
+
+                        if (current.getNext() != null) {
+                            current.getNext().setPrev(current);
+                        }
+
+                        if (next.getPrev() != null) {
+                            next.getPrev().setNext(next);
+                        } else {
+                            this.first=next;
+                        }
+
+                        next = current.getNext();
+                    } else {
+                        current = current.getNext();
+                        next = next.getNext();
+                    }
+                }
+            }
+        }
+    }
+
+
+
 }

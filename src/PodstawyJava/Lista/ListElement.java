@@ -2,11 +2,11 @@ package PodstawyJava.Lista;
 
 public class ListElement {
     private ListElement prev = null;
-    private ListElement next= null;
+    private ListElement next = null;
     private int value;
 
-    public ListElement(int value){
-        this.value=value;
+    public ListElement(int value) {
+        this.value = value;
     }
 
     public ListElement getPrev() {
