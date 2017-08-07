@@ -4,7 +4,9 @@ public class ListMain {
     public static void main(String[] args) {
 
 
-        List list = new List();
+        //List list = new List();
+
+        ListaMergeSort list = new ListaMergeSort();
 
         list.add(6);
         list.add(5);
@@ -19,9 +21,9 @@ public class ListMain {
         list.addSorted(2);
         list.addSorted(5);*/
 
-        list.bubbleSort();
+        //list.bubbleSort();
 
-        list.print();
+        //list.print();
         //list.printReverse();
 
 

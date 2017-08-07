@@ -4,6 +4,22 @@ public class List {
     private ListElement first;
     private ListElement last;
 
+    public ListElement getFirst() {
+        return first;
+    }
+
+    public void setFirst(ListElement first) {
+        this.first = first;
+    }
+
+    public ListElement getLast() {
+        return last;
+    }
+
+    public void setLast(ListElement last) {
+        this.last = last;
+    }
+
     public void add(int el) {
         ListElement tmp = new ListElement(el);
         tmp.setPrev(this.last);
@@ -133,7 +149,5 @@ public class List {
             }
         }
     }
-
-
 
 }
