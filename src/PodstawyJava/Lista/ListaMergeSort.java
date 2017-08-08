@@ -15,7 +15,7 @@ public class ListaMergeSort {
 
     }
 
-    public void findMiddle() {
+    public void sortMerge() {
         int newCounter = (int) Math.floor(this.counter / 2); //lub this.counter / 2
 
         ListElement current = this.first;
@@ -25,11 +25,26 @@ public class ListaMergeSort {
         }
 
 
-        ListaMergeSort newList1 = new ListaMergeSort(this.first, current.getPrev(),newCounter);
-        ListaMergeSort newList2 = new ListaMergeSort(current, this.last, this.counter-newCounter);
+        ListaMergeSort newList1 = new ListaMergeSort(this.first, current.getPrev(), newCounter);
+        ListaMergeSort newList2 = new ListaMergeSort(current, this.last, this.counter - newCounter);
+
 
         current.getPrev().setNext(null);
         current.setPrev(null);
+
+        if (newCounter > 1) {
+            newList1.sortMerge();
+        }
+
+        if ((this.counter - newCounter) > 1) {
+            newList2.sortMerge();
+        }
+
+        newList1.mergeLists(newList2);
+
+        this.first = newList1.getFirst();
+        this.last = newList1.getLast();
+
     }
 
     public void add(int el) {
@@ -49,15 +64,15 @@ public class ListaMergeSort {
         }
     }
 
-    public void mergeLists(ListaMergeSort list1) {
+    public void mergeLists(ListaMergeSort listaMergeSort) {
         ListElement element = null;
 
-        while ((element=list1.get())!=null){
+        while ((element = listaMergeSort.get()) != null) {
             this.addSorted(element);
         }
     }
 
-    public ListElement get(){
+    public ListElement get() {
         if (this.first != null && this.last != null) {
             ListElement listElement = this.first;
 
@@ -121,4 +136,19 @@ public class ListaMergeSort {
 
     }
 
+    public ListElement getFirst() {
+        return first;
+    }
+
+    public void setFirst(ListElement first) {
+        this.first = first;
+    }
+
+    public ListElement getLast() {
+        return last;
+    }
+
+    public void setLast(ListElement last) {
+        this.last = last;
+    }
 }

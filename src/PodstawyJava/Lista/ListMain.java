@@ -9,16 +9,19 @@ public class ListMain {
         ListaMergeSort list = new ListaMergeSort();
 
         list.add(6);
-        list.add(5);
+        list.add(8);
         list.add(4);
-        list.add(3);
+        list.add(20);
         list.add(2);
-        list.add(1);
+        list.add(0);
 
         list.print();
         System.out.println("---");
 
-        ListaMergeSort list2 = new ListaMergeSort();
+        list.sortMerge();
+        list.print();
+
+        /*ListaMergeSort list2 = new ListaMergeSort();
 
         list2.add(7);
         list2.add(0);
@@ -32,7 +35,7 @@ public class ListMain {
         list.print();
         System.out.println("---");
 
-        list2.print();
+        list2.print();*/
 
         /*list.addSorted(3);
         list.addSorted(1);
