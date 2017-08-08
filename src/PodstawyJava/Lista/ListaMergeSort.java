@@ -49,15 +49,15 @@ public class ListaMergeSort {
         }
     }
 
-   /* public void mergeLists(ListaMergeSort list1) {
-        ListElement element = list1.get();
+    public void mergeLists(ListaMergeSort list1) {
+        ListElement element = null;
 
-        while (element!=null){
+        while ((element=list1.get())!=null){
             this.addSorted(element);
         }
-    }*/
+    }
 
-    /*public ListElement get(){
+    public ListElement get(){
         if (this.first != null && this.last != null) {
             ListElement listElement = this.first;
 
@@ -70,10 +70,10 @@ public class ListaMergeSort {
             this.counter--;
             listElement.setNext(null);
             listElement.setPrev(null);
+            return listElement;
         }
-
-
-    }*/
+        return null;
+    }
 
     public void addSorted(ListElement tmp) {
 

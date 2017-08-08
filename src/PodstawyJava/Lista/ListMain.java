@@ -15,6 +15,25 @@ public class ListMain {
         list.add(2);
         list.add(1);
 
+        list.print();
+        System.out.println("---");
+
+        ListaMergeSort list2 = new ListaMergeSort();
+
+        list2.add(7);
+        list2.add(0);
+        list2.add(9);
+        list2.add(8);
+
+        list2.print();
+        System.out.println("---");
+
+        list.mergeLists(list2);
+        list.print();
+        System.out.println("---");
+
+        list2.print();
+
         /*list.addSorted(3);
         list.addSorted(1);
         list.addSorted(4);
@@ -25,10 +44,6 @@ public class ListMain {
 
         //list.print();
         //list.printReverse();
-
-
-
-
 
 
     }
