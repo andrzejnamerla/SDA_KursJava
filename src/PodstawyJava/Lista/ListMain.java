@@ -21,6 +21,8 @@ public class ListMain {
         list.sortMerge();
         list.print();
 
+
+
         /*ListaMergeSort list2 = new ListaMergeSort();
 
         list2.add(7);
