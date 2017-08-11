@@ -1,10 +1,88 @@
 package PodstawyJavaGrafy.Graphs;
 
 import java.util.Arrays;
+import java.util.ArrayList;
 
 public class Graphs {
 
+    //Nowy Mian, pobrac poprawiona wersje z Javapoz
     public static void main(String[] args) {
+
+        /* Generator GNP
+        *  n - liczba naturalna
+        *  p - liczba pomiędzy 0 a 1
+        */
+//        generateGnp(4,0.5);
+
+        /* Generator Gnk
+        *  n - liczba naturalna
+        *  k - liczba krawędzi
+        */
+//        generateGnk(4, 3);
+
+
+        /* Transform A to E
+        *  n - liczba naturalna
+        *  p - liczba pomiędzy 0 a 1
+        *  */
+//        transformAtoE(4, 0.5);
+
+        /*
+        * Transform E to A
+        *  n - liczba naturalna
+        *  k - liczba krawędzi
+        * */
+//        transformaEtoA(4, 3);
+
+//        generateGnkV2(4,3);
+
+        transformAtoS(4);
+    }
+
+    //Nowe metody
+    public static void transformAtoS(int n) {
+        boolean[][] a = GraphGnp.generateGNP(n, 0.5);
+        PrintStructures.printA(a);
+        StructS[] result = Transforms.transformAtoS(a, n);
+//        System.out.println(result.toString());
+        PrintStructures.printStructS(result);
+    }
+
+    public static void transformaEtoA(int n, int k) {
+        Edge[] result = GraphGnk.generateGnk(n, k);
+        PrintStructures.printE(result);
+        boolean[][] a = Transforms.transformEtoA(n, result, k);
+        PrintStructures.printA(a);
+    }
+
+    public static void transformAtoE(int n, double p) {
+        boolean[][] a = GraphGnp.generateGNP(n, p);
+        PrintStructures.printA(a);
+        Edge[] e = Transforms.transformAtoE(a, n);
+        PrintStructures.printE(e);
+    }
+
+    public static void generateGnp(int n, double p) {
+        boolean[][] result = GraphGnp.generateGNP(n, p);
+        PrintStructures.printA(result);
+    }
+
+    public static void generateGnk(int n, int k) {
+        Edge[] result = GraphGnk.generateGnk(n,k);
+        PrintStructures.printE(result);
+    }
+
+    public static void generateGnkV2(int n, int k) {
+        ArrayList<EdgeV2> result = GraphGnk.generateGNKv2(n,k);
+        PrintStructures.printEV2(result);
+    }
+
+
+
+
+
+    //Moj stary Main
+   /* public static void main(String[] args) {
         System.out.println();
         int n = 4;
         int k = 4;
@@ -28,7 +106,8 @@ public class Graphs {
         //Testowe wywolanie generowania tablicy E typu Edge
         Edge[] test = generateEdgeArray(n);
         for (int i = 0; i < test.length; i++) {
-            System.out.println(test[i].toString());
+            System.out.println(tes
+    t[i].toString());
         }
 
         System.out.println("\n --- --- --- \n");
@@ -47,8 +126,11 @@ public class Graphs {
         }
 
         System.out.println("\n --- --- --- \n");
-    }
+    }*/
 
+
+    //Moje stare metody, przeniesione do klas
+    /*
     private static Edge[] generateEdgeArray(int n) {
         int h = n * (n - 1) / 2;
         Edge[] result = new Edge[h];
@@ -136,5 +218,6 @@ public class Graphs {
             }
         }
         return result;
-    }
+    }*/
+
 }
