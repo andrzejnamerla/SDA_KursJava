@@ -7,19 +7,21 @@ public class Node {
 
     @Override
     public String toString() {
-        String tmp = "";
+        String tmp = String.valueOf(this.key);
         int leftInt = 0;
         int rightInt = 0;
 
         if (this.right != null) {
             rightInt = right.key;
+            tmp += ", right: " + right.key;
         }
 
         if (this.left != null) {
             leftInt = left.key;
+            tmp += ", left: " + left.key;
         }
-
-        return "Node: " + this.key + ", right: " + this.right + ", left" + this.left;
+        return tmp;
+        //return "Node: " + this.key + ", right: " + this.right + ", left" + this.left;
 
     }
 
