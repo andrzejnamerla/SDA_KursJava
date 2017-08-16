@@ -172,9 +172,9 @@ public class Graphs {
             while (k > 0) {
                 int r = (int) Math.floor(Math.random() * h);
 
-                Edge tmp = result[r];
+                Edge BinaryTree = result[r];
                 result[r] = result[h - 1];
-                result[h - 1] = tmp;
+                result[h - 1] = BinaryTree;
 
                 h--;
                 k--;
@@ -212,9 +212,9 @@ public class Graphs {
     private static Edge[] moveItem(Edge[] result, int i, int j, int index) {
         for (Edge e : result) {
             if (e.a == i && e.b == j) {
-                Edge tmp = e;
+                Edge BinaryTree = e;
                 e = result[index];
-                result[index] = tmp;
+                result[index] = BinaryTree;
             }
         }
         return result;
