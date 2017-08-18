@@ -1,9 +1,13 @@
 package JVM;
 
+
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.List;
 
 public class FileOperations {
 
@@ -65,6 +69,16 @@ public class FileOperations {
         }
 
         return stringBuilder.toString();
+    }
+
+    public static List<String> readAllLine(String path) {
+        List<String> lista = null;
+        try {
+            lista = Files.readAllLines(Paths.get(path));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return lista;
     }
 
 }
