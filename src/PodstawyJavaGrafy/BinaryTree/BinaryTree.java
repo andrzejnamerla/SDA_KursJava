@@ -3,6 +3,7 @@ package PodstawyJavaGrafy.BinaryTree;
 public class BinaryTree {
     public static void main(String[] args) {
 
+
         Node nodeTree = randomBinaryTree(6, 100, 0.5);
 
         System.out.println("\nPreorder");
