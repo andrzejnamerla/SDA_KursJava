@@ -81,7 +81,7 @@ public class Graphs {
 
 
 
-    //Moj stary Main
+    //Moj stary FileMain
    /* public static void main(String[] args) {
         System.out.println();
         int n = 4;
