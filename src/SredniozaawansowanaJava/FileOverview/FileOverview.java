@@ -15,7 +15,6 @@ public class FileOverview {
 
     public static void createDirectoryAndFile() {
 
-
         BufferedWriter bufferedWriter = null;
         FileWriter fileWriter = null;
 
@@ -47,15 +46,15 @@ public class FileOverview {
 
     }
 
-    public static void createDirectoryWithResources(String path) {
-        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(path))) {
-            bufferedWriter.write("wiadomosc");
+    public static void createDirectoryWithResources() {
+        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(createDirectory() + "//plik2.txt", true))) {
+            bufferedWriter.write(createNote());
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    private static String createDirectory() {
+    public static String createDirectory() {
         //file.mkdir() tworzenie katalogu
         //file.createNewFile() tworzenie katalogu
 
@@ -85,7 +84,7 @@ public class FileOverview {
     public static String createNote() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Podaj notatke: ");
-        String note = scanner.nextLine();
+        String note = scanner.nextLine() + "\n";
         return note;
     }
 }
