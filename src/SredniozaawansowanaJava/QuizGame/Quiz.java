@@ -2,13 +2,16 @@ package SredniozaawansowanaJava.QuizGame;
 
 import java.io.IOException;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
+import static java.nio.file.Paths.*;
+
 public class Quiz {
 
-    private static final String PATH_TO_RESULTS = "wyniki.txt";
+    public static final String PATH_TO_RESULTS = "C:\\Users\\RENT\\Documents\\ASN\\src\\SredniozaawansowanaJava\\QuizGame\\wyniki.txt";
     public static final String PATH_TO_QUESTIONS = "C:\\Users\\RENT\\Documents\\ASN\\src\\SredniozaawansowanaJava\\QuizGame\\pytania.txt";
 
     public static List<String> getRanking() {
@@ -19,7 +22,7 @@ public class Quiz {
         List<String> result = null;
 
         try {
-            result = Files.readAllLines(Paths.get(PATH_TO_RESULTS));
+            result = Files.readAllLines(get(PATH_TO_RESULTS));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -36,7 +39,7 @@ public class Quiz {
         List<Question> questionList = new ArrayList<>();
 
         try {
-            questionsFromFiles = Files.readAllLines(Paths.get(PATH_TO_QUESTIONS));
+            questionsFromFiles = Files.readAllLines(get(PATH_TO_QUESTIONS));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -54,5 +57,6 @@ public class Quiz {
 
         return questionList;
     }
+
 
 }
