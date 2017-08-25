@@ -19,7 +19,7 @@ public class FileOverview {
         FileWriter fileWriter = null;
 
         try {
-            fileWriter = new FileWriter(createDirectory() + "\\plik.txt");
+            fileWriter = new FileWriter(createDirectory() + "\\slowa.txt");
             bufferedWriter = new BufferedWriter(fileWriter);
             bufferedWriter.write(createNote());
 

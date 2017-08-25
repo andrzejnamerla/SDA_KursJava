@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Main {
 
-    private static final String PATH_TO_FILE = "C:\\Users\\RENT\\Documents\\ASN\\src\\JVM\\plik.txt";
+    private static final String PATH_TO_FILE = "C:\\Users\\RENT\\Documents\\ASN\\src\\JVM\\slowa.txt";
 
     public static void main(String[] args) throws InterruptedException {
 
